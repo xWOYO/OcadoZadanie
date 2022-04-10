@@ -11,9 +11,9 @@ public class WriteFile {
         this.timeWithRoute = timeWithRoute;
     }
 
-    public void writeData(){
+    public void writeData() {
         double time = timeWithRoute.y;
-        String timeString = String.format(Locale.US ,"%.1f", time);
+        String timeString = String.format(Locale.US, "%.1f", time);
         ArrayList<Pair<Integer, Integer>> route = timeWithRoute.x;
         try {
             PrintWriter writer = new PrintWriter(new FileWriter("results.txt", false));
@@ -23,7 +23,7 @@ public class WriteFile {
                 writer.println(pair.toString());
             }
             writer.close();
-        } catch(IOException e) {
+        } catch (IOException e) {
             System.out.println("There was en error while writing file\n" + e);
             System.exit(1);
         }

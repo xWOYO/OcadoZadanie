@@ -9,23 +9,23 @@ public class Job {
     private int endX;
     private String product;
 
-    public Job(String jobFile){
+    public Job(String jobFile) {
         String line;
         String[] coordinates;
-        try{
+        try {
             BufferedReader bufferedReader = new BufferedReader(new FileReader(jobFile));
             line = bufferedReader.readLine();
             coordinates = line.split(" ");
-            startY = Integer.parseInt( coordinates[0]);
-            startX = Integer.parseInt( coordinates[1]);
+            startY = Integer.parseInt(coordinates[0]);
+            startX = Integer.parseInt(coordinates[1]);
 
             line = bufferedReader.readLine();
             coordinates = line.split(" ");
-            endY = Integer.parseInt( coordinates[0]);
-            endX = Integer.parseInt( coordinates[1]);
+            endY = Integer.parseInt(coordinates[0]);
+            endX = Integer.parseInt(coordinates[1]);
 
             product = bufferedReader.readLine();
-        } catch(IOException e){
+        } catch (IOException e) {
             System.out.println("There was en error while reading file\n" + e);
             System.exit(1);
         }

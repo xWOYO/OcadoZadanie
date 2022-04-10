@@ -1,4 +1,4 @@
-public class Pair<A,B> {
+public class Pair<A, B> {
     public final A y;
     public final B x;
 
@@ -11,4 +11,4 @@ public class Pair<A,B> {
     public String toString() {
         return x + " " + y;
     }
-};
+}
